@@ -1,34 +1,34 @@
-import { Container, Grid, Stack, Typography } from '@mui/material';
-import React from 'react';
+import { Container, Grid, Stack, Typography } from "@mui/material";
+import React from "react";
 import { FC, ReactElement } from "react";
-import ScrollToTop from '../components/buttons/ScrollToTop';
-import SettingsUI from '../components/SettingsUI';
-const Settings : FC<{}> = () : ReactElement => {
+import ScrollToTop from "../components/buttons/ScrollToTop";
+import SettingsUI from "../components/SettingsUI";
+const Settings: FC<{}> = (): ReactElement => {
   return (
     <>
       <Container>
-        <ScrollToTop/>
-        
+        <ScrollToTop />
+
         <Grid
-    container
-    direction="column"
-    justifyContent="space-evenly"
-    alignItems="flex-start"
-    spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
-   m={10}
-  >
-  
+          container
+          direction="column"
+          justifyContent="space-evenly"
+          alignItems="flex-start"
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          m={2}
+          marginTop={10}
+        >
           <Grid item xs={4} md={12} marginTop={10}>
-            <Typography variant="h6" component="div" gutterBottom>Settings</Typography>
+            <Typography variant="h6" component="div" gutterBottom>
+              Settings
+            </Typography>
           </Grid>
-          <Grid item xs={4} md={12}>
-            <SettingsUI/>
-          </Grid>
-         
         </Grid>
-        </Container>
-      </>
-    );
-  };
+        <SettingsUI />
+      </Container>
+    </>
+  );
+};
 
 export default Settings;

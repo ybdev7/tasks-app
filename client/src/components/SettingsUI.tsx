@@ -58,9 +58,9 @@ const SettingsUI = (): ReactElement => {
 
   return (
     <>
-      <Card sx={{ minWidth: 200, maxWidth: 800 }}>
+      <Card sx={{ minWidth: 200, maxWidth: 1000 }}>
         <Stack
-          direction={{ xs: "column" }}
+          direction={{ xs: "column", m: "row" }}
           spacing={{ xs: 1, sm: 2, md: 10 }}
           m={4}
         >

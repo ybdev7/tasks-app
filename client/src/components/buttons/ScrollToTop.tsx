@@ -7,7 +7,7 @@ interface ScrollToTopProps {
   offset?: number;
 }
 
-const ScrollToTop = ({ offset = 200 }: ScrollToTopProps) => {
+const ScrollToTop = ({ offset = window.screenY }: ScrollToTopProps) => {
   const [shown, setShown] = useState<boolean>(false);
 
   useEffect(() => {
