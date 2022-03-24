@@ -124,8 +124,8 @@ const TaskCard = ({
         >
           {task.isComplete ? <RuleOutlinedIcon /> : <TaskOutlinedIcon />}
         </IconButton>
-        <IconButton>
-          <ModeEditOutlineOutlinedIcon onClick={() => updateTask(task)} />
+        <IconButton onClick={() => updateTask(task)}>
+          <ModeEditOutlineOutlinedIcon />
         </IconButton>
         <IconButton onClick={handleDelete}>
           <DeleteOutlineOutlinedIcon />

@@ -16,25 +16,8 @@ import { routes } from "./config";
 import { Drawer, ListItem, ListItemText } from "@mui/material";
 
 function Navbar() {
-  const { isDark, setThemeMode, lang, setLang } = useContext(
-    ThemeContext
-  ) as ThemeModeContext;
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const onThemeChange = (event: React.MouseEvent<HTMLElement>, value: any) => {
-    console.log(`value=${value} `);
-
-    //value is null if the same button (dark/light) is clicked more then once in a raw
-    if (value) setThemeMode(value === "dark");
-  };
-
-  const onLangChange = (event: React.MouseEvent<HTMLElement>, value: any) => {
-    console.log(`lang value=${value} `);
-
-    //value is null if the same button (dark/light) is clicked more then once in a raw
-    if (value) setLang(value);
-  };
   const handleClick = () => {
     setIsDrawerOpen(false);
   };
